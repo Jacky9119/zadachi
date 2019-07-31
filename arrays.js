@@ -49,7 +49,7 @@ var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
 
 var rand = min + Math.floor(Math.random() * (arr.length));           
 
-alert(rand);                                                //в решении вообще по другому alert( arr                                                               [rand] ); И я чет не понял нихуя сути. 
+alert(rand);                                                //в решении вообще по другому alert( arr                                                               [rand] ); И я чет не понял почему. 
 
 
 /*Напишите код, который:
@@ -81,7 +81,7 @@ alert( sum );
 
 var arr = [1, 2, 3];
 
-var arr2 = arr;                Походу 5.
+var arr2 = arr;                                                   Выведет 5.
 arr2[0] = 5;
 
 alert( arr[0] );
@@ -109,7 +109,7 @@ find(arr, 0); // -1 */
 
 function find(array, value) {
     for (var i = 0; i < array.length; i++) {
-      if (array [i] == value) return i;                  //Тут тоже странно, условие какое то                                                           непонятное мне было в итоге глянул в решение и                                                  все равно не понял в чем прикол и как делать.                                                    Что тут имеется ввиду под array [i]?
+      if (array [i] == value) return i;                  //Тут тоже странно, условие                                                           непонятное мне было в итоге глянул в решение и                                                  все равно не понял в чем прикол и как делать.                                                    Что тут имеется ввиду под array [i]?
                                                       
     }
 
@@ -133,57 +133,3 @@ for (var i = 0; arr > 0; i++);
  //-----------------------------------------------------------
  
  
- /*Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть.*/
-
- function isEmpty(obj) {
-  for ( var key in obj) {
-    return false;
-  }
-    return true;
-}
-
-var schedule = {};
-
-alert( isEmpty(schedule) ); 
-
-schedule["8:30"] = "подъём";
-
-alert( isEmpty(schedule));
-
-/*
-Есть объект salaries с зарплатами. Напишите код, который выведет сумму всех зарплат.
-
-Если объект пустой, то результат должен быть 0.*/
-
-var salaries = {
-  "Вася": 100,
-  "Петя": 300,
-  "Даша": 250
-};     
-  var sum = 0;                                
-for ( var name in solaries) {
-  sum += solaries [name];
-}
-alert(sum);
-
-
-/*Есть объект salaries с зарплатами. Напишите код, который выведет имя сотрудника, у которого самая большая зарплата.
-
-Если объект пустой, то пусть он выводит «нет сотрудников».*/
-
-var salaries = {
-  "Вася": 100,
-  "Петя": 300,
-  "Даша": 250
-}; 
-var max = 0;                                       /*Это тупо переписал так как жопа полная
-                                                   Не понял зачем тут maxName = '';*/
-var maxName = "";
-for (var name in salaries) {
-  if (max < salaries [name]) {
-    max = salaries [name];
-    maxName = name;
-  }
-}
-alert( maxName || "нет сотрудников");                       
-
